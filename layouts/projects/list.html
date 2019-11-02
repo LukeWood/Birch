@@ -1,10 +1,10 @@
-{{ define "extra-header" }}
-  {{ partial "stylesheet.html" "projects" }}
+{{ define "internal-extra-header" }}
+  {{ partial "core/stylesheet.html" "projects" }}
 {{ end }}
 {{ define "main" }}
 <div class="projects-grid-wrapper">
   <main class="projects-grid">
-    {{ range sort .Data.Pages ".Params.order" (where .Data.Pages "Section" "project") }}
+    {{ range .Data.Pages }}
       <div class="mdc-card">
         {{ if isset .Params "thumbnail" }}
         {{$title := .Title}}
@@ -33,7 +33,7 @@
           </div>
           <div class="icon-actions">
           {{if isset .Params "twitter"}}{{.Params.Twitter}}{{end}}
-          {{if isset .Params "github"}}<a class="visit text-color no-decoration material-icon" href="{{.Params.Github}}">{{ partial "svg.html" (dict "name" "github")}}</a>{{end}}
+          {{if isset .Params "github"}}<a class="visit text-color no-decoration material-icon" href="{{.Params.Github}}">{{ partial "core/svg.html" (dict "name" "github")}}</a>{{end}}
           {{if isset .Params "link"}}<a class="visit text-color no-decoration material-icon" href="{{.Params.Link}}">launch</a>{{end}}
           </div>
         </div>
