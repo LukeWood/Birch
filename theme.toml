@@ -1,0 +1,12 @@
+name = "Wood"
+license = "CC"
+licenselink = "https://github.com/lukewood/wood/blob/master/LICENSE"
+description = "Theme used to generate lukewood.github.io"
+homepage = ""
+tags = ["blog", "project", "portfolio"]
+features = []
+min_version = "0.57"
+
+[author]
+  name = "Luke Wood"
+  homepage = "https://lukewood.dev"

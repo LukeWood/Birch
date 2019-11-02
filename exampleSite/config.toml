@@ -1,0 +1,26 @@
+baseURL = "/"
+title = "Wood Theme"
+author = "Luke Wood"
+theme=wood
+copyright = "© 2019, Luke Wood."
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+
+[menu]
+  [[menu.main]]
+    name = "Projects"
+    url = "/project"
+    weight = 2
+  [[menu.main]]
+    name = "Blog"
+    url = "/post"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 0
+
+[taxonomies]
+  posts = "posts"
+  projects = "projects"
