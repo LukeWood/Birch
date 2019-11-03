@@ -87,6 +87,13 @@ a.no-decoration {
   text-decoration: none;
 }
 
+a.primary-color {
+  color: var(--primary_color);
+  &:hover {
+    color: var(--primary_color_dark);
+  }
+}
+
 a.text-color {
   color: var(--text_color);
   &:hover {
