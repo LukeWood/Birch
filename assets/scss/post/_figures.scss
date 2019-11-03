@@ -1,21 +1,11 @@
-.bordered-figure img {
-  border: solid #c6cddb 3px;
-}
-
-.dark-gray-background img {
- background-color: #606775;
-}
-
-.bordered {
- border: solid #c6cddb 3px;
-}
-
 figure {
   margin: 0;
   text-align: center;
   img {
     width: 100%;
     height: auto;
+    background-color: var(--figure_background);
+    border: solid var(--text_color) 2px;
   }
   * {
     margin: 0;
