@@ -4,5 +4,5 @@
 {{ $cssTarget    := printf "%s.css" . }}
 {{ $cssOpts      := (dict "targetPath" $cssTarget "enableSourceMap" true "includePaths" $sassIncludes "outputStyle" "compressed") }}
 
-{{ $css := $sass | toCSS $cssOpts | resources.PostCSS | fingerprint }}
+{{ $css := $sass | toCSS $cssOpts | fingerprint }}
 <link rel="stylesheet" type="text/css" href="{{ $css.Permalink | absURL }}">
