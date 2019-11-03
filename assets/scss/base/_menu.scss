@@ -26,9 +26,8 @@ nav.menu {
     line-height: 100%;
     vertical-align: bottom;
     text-decoration: none;
-    .main-emphasis {
-      color: var(--primary_menu_link_color) !important;
-      font-size: 1.2rem;
+    &.main-emphasis {
+      color: var(--primary_menu_link_color);
       &:hover {
         color: var(--primary_menu_link_color_hover) !important;
       }
