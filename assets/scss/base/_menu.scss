@@ -26,14 +26,14 @@ nav.menu {
     line-height: 100%;
     vertical-align: bottom;
     text-decoration: none;
-    &.main-emphasis {
-      color: var(--primary_menu_link_color);
+    .main-emphasis {
+      color: var(--primary_menu_link_color) !important;
       font-size: 1.2rem;
       &:hover {
-        color: var(--primary_menu_link_color_hover);
+        color: var(--primary_menu_link_color_hover) !important;
       }
     }
-    &.menu-item {
+    .menu-item {
       margin-left: .5rem;
       font-size: 1rem;
     }
