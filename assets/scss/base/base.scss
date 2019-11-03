@@ -13,11 +13,33 @@ $background-color: #121212;
   --text_color: #FFFFFF;
   --text_color_dark: #BBBBBB;
   --transition_duration: .3s;
+  --menu_background: #313131;
 }
 
+:root[data-theme='light'] {
+  // NOTE:  dark and lights are inversed in light mode to keep the feel of
+  // getting closer to the background color
+  --background_color: #FFFFFF;
+  --primary_color: #0d47a1;
+  --primary_color_light: #002171;
+  --primary_color_dark: #5472d3;
+  --secondary_color: #2e7d32;
+  --secondary_color_light: #005005;
+  --secondary_color_dark: #60ad5e;
+  --text_color: black;
+  --text_color_dark: #888888;
+  --transition_duration: .3s;
+  --menu_background: #0d47a1;
+  --primary_menu_link_color: #FFFFFF;
+  --primary_menu_link_color_hover: #CCCCCC;
+}
+
+
 body.preload {
-  * {
-    transition: none !important;
+  &.preload {
+    * {
+      transition: color none, background-color none !important;
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="dark" lang="en">
   <head>
     {{block "base-header" .}}
       {{ partial "core/head.html" .}}
@@ -11,6 +11,7 @@
     {{ end }}
     {{ block "extra-header" . }}
     {{ end }}
+    <script async>document.documentElement.setAttribute("data-theme", (window.localStorage && window.localStorage.getItem("preferredTheme")) || "dark");</script>
   </head>
   <body class="preload">
     {{ block "menu" . }}
