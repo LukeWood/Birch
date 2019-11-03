@@ -1,0 +1,7 @@
+{{$favicon := resources.Get $.Site.Params.Favicon}}
+{{$.Scratch.Set "icons" slice}}
+{{ range slice "32" "96" "57" "60" "72" "76" "114" "120" "128" "144" "152" "180" "192"}}
+  {{$resized := $favicon.Resize (printf "%sx%s" . .)}}
+  {{$iconVal := (dict "sizes" (printf "%sx%s" . .) "type" "image/png" "src" $resized.Permalink )}}
+  {{$.Scratch.Set "icons" (($.Scratch.Get "icons") | append (slice $iconVal))}}
+{{ end }}

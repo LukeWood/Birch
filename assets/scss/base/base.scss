@@ -1,6 +1,5 @@
 @import "_font";
-
-$background-color: #121212;
+@import "_footer";
 
 :root {
   --background_color: #121212;
@@ -39,7 +38,6 @@ $background-color: #121212;
   --card_color_hover: #EEEEEE;
   --figure_background: #FFFFFF;
 }
-
 
 body.preload {
   &.preload {

@@ -15,12 +15,11 @@
   </head>
   <body class="preload">
     {{ block "menu" . }}
-      {{ partial "menu.html" .}}
+      {{ partialCached "menu.html" .}}
     {{ end }}
     {{ block "main" . }}
     {{ end }}
-    <script>window.addEventListener('load', () => document.body.classList.remove("preload"))</script>
+    <script async>window.addEventListener('load', () => document.body.classList.remove("preload"))</script>
+    {{ partial "core/script.html" "js/lozad.js" }}
   </body>
-
-  {{ partial "core/script.html" "js/lozad.js" }}
 </html>

@@ -1,18 +1,15 @@
 baseURL = "/"
-title = "Wood Theme"
+title = "Birch"
 author = "Luke Wood"
-theme = "wood"
+theme = "birch"
 copyright = "© 2019, Luke Wood."
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
+enableEmoji = true
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
-
-  mailchimp = "Your Mailchimp Id"
+  mailchimp = "Copy paste the submit url from your mailchimp id"
+  favicon = "/favicon128.png"
 
 [menu]
   [[menu.main]]
@@ -27,3 +24,6 @@ enableInlineShortcodes = true
     name = "About"
     url = "/about"
     weight = 0
+
+# Optional menu: [[menu.header]]
+# Same format
