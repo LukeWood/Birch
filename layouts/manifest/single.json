@@ -1,7 +1,6 @@
-{{ partial "generateIcons.html" . }}
 {
   "display": "minimal-ui",
-  "icons": {{ $.Scratch.Get "icons" | jsonify }},
+  "icons": {{ (partialCached "generateIcons" .) | jsonify }},
   "short_name": "{{$.Site.Title}}",
   "name": "{{$.Site.Title}}",
    "start_url": "/", "background_color": "#121212", "theme_color": "#82b1ff"
