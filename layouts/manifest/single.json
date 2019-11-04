@@ -1,7 +1,9 @@
 {
-  "display": "minimal-ui",
+  "display": "standalone",
   "icons": {{ (partialCached "generateIcons" .) | jsonify }},
   "short_name": "{{$.Site.Title}}",
   "name": "{{$.Site.Title}}",
-   "start_url": "/", "background_color": "#121212", "theme_color": "#82b1ff"
+  "start_url": "/",
+  "background_color": "#121212",
+  "theme_color": "#82b1ff"
 }

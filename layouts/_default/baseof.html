@@ -11,7 +11,8 @@
     {{ end }}
     {{ block "extra-header" . }}
     {{ end }}
-    <script async>document.documentElement.setAttribute("data-theme", (window.localStorage && window.localStorage.getItem("preferredTheme")) || "dark");</script>
+
+    {{ partialCached "core/script" "js/darkmode.js"}}
   </head>
   <body class="preload">
     {{ block "menu" . }}
@@ -19,7 +20,8 @@
     {{ end }}
     {{ block "main" . }}
     {{ end }}
-    <script async>window.addEventListener('load', () => document.body.classList.remove("preload"))</script>
+
+    {{ partial "core/script" "js/preload.js"}}
     {{ partial "core/script.html" "js/lozad.js" }}
   </body>
 </html>
