@@ -10,6 +10,7 @@ enableEmoji = true
 [params]
   mailchimp = "Copy paste the submit url from your mailchimp id"
   favicon = "/favicon128.png"
+  pwa_name = "example site"
 
 [menu]
   [[menu.main]]

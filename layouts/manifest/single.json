@@ -1,8 +1,8 @@
 {
   "display": "standalone",
   "icons": {{ (partialCached "generateIcons" .) | jsonify }},
-  "short_name": "{{$.Site.Title}}",
-  "name": "{{$.Site.Title}}",
+  "name": "{{index $.Site.Params "pwa_name" | default $.Site.Title}}",
+  {{ with index $.Site.Params "pwa_short_name"}}"pwa_short_name": "{{index $.Site.Params "pwa_short_name"}}",{{end}}
   "start_url": "/",
   "background_color": "#121212",
   "theme_color": "#82b1ff"
