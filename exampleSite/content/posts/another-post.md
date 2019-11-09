@@ -3,10 +3,17 @@ title = "Another Hugo Post"
 description = "Nothing special, but one post is boring."
 date = "2014-09-02"
 categories = [ "example", "configuration" ]
+outputs = [
+  "html",
+  "json"
+]
 tags = [
     "example",
     "hugo",
     "toml"
+]
+precache = [
+  "/posts/another-post/"
 ]
 +++
 

@@ -1,0 +1,8 @@
+{{ $preload := partial "core/get_script" "js/preload.js" }}
+{{ $lozad := partial "core/get_script" "js/lozad.js" }}
+{{ $cache := partial "core/get_script" "js/cache.js" }}
+{{ $darkmode := partial "core/get_script" "js/darkmode.js"}}
+
+{{ $corecss := partial "core/get_stylesheet" "base"}}
+
+{{ return (slice "" $preload $lozad $cache $darkmode $corecss)}}

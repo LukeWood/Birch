@@ -1,0 +1,2 @@
+{{ $script := resources.Get . | minify | fingerprint}}
+{{ return $script.Permalink }}

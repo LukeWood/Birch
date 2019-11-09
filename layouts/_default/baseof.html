@@ -12,7 +12,6 @@
     {{ block "extra-header" . }}
     {{ end }}
 
-    {{ partialCached "core/script" "js/darkmode.js"}}
   </head>
   <body class="preload">
     {{ block "menu" . }}
@@ -21,7 +20,9 @@
     {{ block "main" . }}
     {{ end }}
 
-    {{ partial "core/script" "js/preload.js"}}
+    {{ partial "core/script.html" "js/preload.js" }}
     {{ partial "core/script.html" "js/lozad.js" }}
+    {{ partial "core/script.html" "js/cache.js" }}
+    {{ partial "core/script.html" "js/darkmode.js"}}
   </body>
 </html>
