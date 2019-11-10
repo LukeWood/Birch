@@ -1,5 +1,11 @@
-@import "_font";
-@import "_footer";
+@import "font";
+@import "footer";
+@import "darkmode";
+
+@import "normalize";
+
+@import "menu";
+@import "material_icons";
 
 :root {
   --background_color: #121212;
@@ -16,6 +22,8 @@
   --card_color: #242424;
   --card_color_hover: #2c2c2c;
   --figure_background: #89909f;
+  --inverse_text_color: #121212;
+  --inverse_text_color_variant: #242424;
 }
 
 :root[data-theme='light'] {
@@ -37,6 +45,8 @@
   --card_color: #FFFFFF;
   --card_color_hover: #EEEEEE;
   --figure_background: #FFFFFF;
+  --inverse_text_color: #f5f5f5;
+  --inverse_text_color_variant: #CCCCCC;
 }
 
 body.preload {
@@ -47,8 +57,6 @@ body.preload {
   }
 }
 
-@import "menu";
-@import "material_icons";
 
 * {
   box-sizing: border-box;
@@ -58,16 +66,19 @@ body.preload {
 html {
   z-index: -2;
   background-color: var(--background_color);
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0
 }
 
 body {
+  width: 100%;
   padding: 0;
   margin: 0;
   font-family: 'Cairo', sans-serif;
   color: var(--text_color);
-  padding: 0;
-  margin: 0;
   overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -90,7 +101,7 @@ body {
 }
 
 h1, h2 {
-  color: var(--primary_color);
+  color: var(--dprimary_color);
   font-family: 'Cairo', sans-serif;
   font-weight: 700;
 }

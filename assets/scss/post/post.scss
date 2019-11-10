@@ -10,7 +10,6 @@ $max-content-width: 48rem;
   align-items: center;
   justify-content: space-around;
 }
-
 .content {
   width: 100%;
   min-height: 100vh;
@@ -20,9 +19,13 @@ $max-content-width: 48rem;
   * {
     max-width: 100%;
   }
-
+  pre {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
   code {
     font-size: .8rem;
+    width: 100%;
     -webkit-text-size-adjust: none;
   }
 

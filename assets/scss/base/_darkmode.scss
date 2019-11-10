@@ -1,0 +1,15 @@
+#night-toggle {
+  z-index: 1001;
+  position: fixed;
+  font-size: 18px;
+  bottom: .5rem;
+  right: .5rem;
+  background-color: var(--primary_color);
+  color: var(--inverse_text_color);
+  cursor: pointer;
+  margin: 0;
+  &:hover {
+    background-color: var(--primary_color_dark);
+    color: var(--inverse_text_color_variant);
+  }
+}
