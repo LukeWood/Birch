@@ -4,33 +4,26 @@
 {{ define "main" }}
   <main class="container">
     <div>
+    <center><h1>{{.Title}}</h1></center>
+
+    <center>
+      <div class="controls">
+      {{ with .NextInSection }}
+        <a class="primary-color" href="{{ .Permalink }}">⬅️ Newer</a>
+      {{ else }}
+        <div></div>
+      {{ end }}
+      {{ with .PrevInSection }}
+        <a class="primary-color" href="{{ .Permalink }}">Older ➡️</a>
+      {{ else }}
+        <div></div>
+      {{ end }}
+      </div>
+    </center>
+
     <article class="content">
-      {{$title:=.Title}}
-      {{ with .Params.Youtube }}
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{.}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      {{ end }}
-      {{ with .Params.Image }}
-        <center>
-          <img src={{.}} alt="{{$title}}">
-        </center>
-      {{ end }}
-
-
+      {{ .Content }}
     </article>
-      <center>
-        <div class="controls">
-        {{ with .NextInSection }}
-          <a class="primary-color" href="{{ .Permalink }}">Newer</a>
-        {{ else }}
-          <div></div>
-        {{ end }}
-        {{ with .PrevInSection }}
-          <a class="primary-color" href="{{ .Permalink }}">Older</a>
-        {{ else }}
-          <div></div>
-        {{ end }}
-        </div>
-      </center>
     </div>
   </main>
 
